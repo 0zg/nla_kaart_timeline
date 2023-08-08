@@ -1,14 +1,13 @@
 Run following code in R console:
 
-    shiny::runGitHub("szwd_mapmaker_simple", "0zg", host ="0.0.0.0", port =1234)
+    shiny::runGitHub("nla_kaart_timeline", "0zg", host ="0.0.0.0", port =1234, launch.browser = TRUE) 
 
 *Current Version*: 0.1.2
 
-# mapmaker_simple : upload csv, show map
+# nla_kaart_timeline : upload csv, show map, play with timeslider
 
-Uses leaflet for the map and has a data tab. 
+Uses leaflet for the map and has a data import tab. 
 Not much to say. You upload a CSV and get to see the lat-lon GPS plotted on a map.
-Just a few configurations are available, to avoid choice-stress (https://en.wikipedia.org/wiki/The_Paradox_of_Choice#Why_we_suffer )
 
 ## References:
 
@@ -23,7 +22,7 @@ First, download and install R:
 Second, install required R packages:
 
     # set package repository to R 4.2.2 snapshot
-    setRepositories(addURLs = c(MRAN_R422="https://packagemanager.posit.co/cran/2022-11-01"),ind=0)
+    setRepositories(addURLs = c(PRAN_R422="https://packagemanager.posit.co/cran/2022-11-01"),ind=0)
     
     # create package list
     packages <- c( "htmlwidgets","DT","shiny","leaflet","dplyr" )
@@ -37,9 +36,11 @@ Second, install required R packages:
 Finally, run following code in R console:
 
     library(shiny)
-    shiny::runGitHub( "szwd_mapmaker_simple", "0zg" )
+    shiny::runGitHub("nla_kaart_timeline", "0zg", host ="0.0.0.0", port =1234, launch.browser = TRUE) 
+
+    
 
 
 # License
 
-none
+MIT
