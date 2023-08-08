@@ -4,10 +4,11 @@ Run following code in R console:
 
 *Current Version*: 0.1.2
 
-# nla_kaart_timeline : upload csv, show map, play with timeslider
+# nla_kaart_timeline : upload csv, show map, use slider
 
 Uses leaflet for the map and has a data import tab. 
 Not much to say. You upload a CSV and get to see the lat-lon GPS plotted on a map.
+You can play with the time-slider to change and select map-points.
 
 ## References:
 
