@@ -37,7 +37,7 @@ ui <- shinyUI(fluidPage(
          tabPanel("Import CSV", value="tab1",
                   
                   # Input: Select a file ---
-                  fileInput("file1", "Kies een CSV bestand met postcodes en/of coordinaten om deze op de kaart te tonen. Ook moet deze een kolom genaamd tijdslider bevatten.",
+                  fileInput("file1", "Kies een CSV bestand met postcodes en/of coordinaten om deze op de kaart te tonen. \n Ook moet de CSV een kolom genaamd 'tijdslider' bevatten. \n Klik hierna op 'Toon de punten op de kaart' om de kaart te vullen met de coordinaat gegevens van je CSV.",
                             multiple = TRUE,
                             accept = c("text/csv",
                          "text/comma-separated-values,text/plain",
@@ -51,14 +51,14 @@ ui <- shinyUI(fluidPage(
                                            Komma = ","),
                                selected = ";"),
                   tags$hr(),
-                  actionButton("showmap", "Toon op kaart"),
+                  actionButton("showmap", "Toon de punten op de kaart"),
                   tags$br(),tags$br(),
                   verbatimTextOutput("txt1", placeholder = TRUE),
                   tags$br(),tags$br(),
                   tableOutput("contents")
                   
                   ),   
-         tabPanel("Toon Kaart", value="tab2",
+         tabPanel("kaart", value="tab2",
 
             div(class="outer",
                 

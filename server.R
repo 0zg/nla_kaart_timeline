@@ -209,7 +209,9 @@ server <- shinyServer(function(input, output, session) {
         updateTabsetPanel(session, "nav",
                           selected = "tab2")
         leafletProxy("map", data = sv$coords) %>% ## reactive_data_with_chrono_filter() ) %>%
-            clearShapes() %>%
+          clearShapes() %>%
+          clearMarkers() %>%
+          clearMarkerClusters() %>%
             addMarkers(lng=~lon, lat=~lat, clusterOptions = markerClusterOptions())
     })
     
@@ -245,12 +247,12 @@ server <- shinyServer(function(input, output, session) {
 
 # # TEST : : TEST
 # # Make the application
-#app <- shinyApp(ui = ui, server = server)
+app <- shinyApp(ui = ui, server = server)
 
 # # Run the application
 # # for more options: https://shiny.rstudio.com/reference/shiny/0.14/shiny-options.html
-#runApp(app, port = 3127, host =  "0.0.0.0",
-#       launch.browser =  interactive(), workerId = "",
-#       quiet = FALSE, display.mode = c( "normal"))
+runApp(app, port = 3127, host =  "0.0.0.0",
+       launch.browser =  interactive(), workerId = "",
+       quiet = FALSE, display.mode = c( "normal"))
 
 
