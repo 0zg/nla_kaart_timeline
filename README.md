@@ -37,7 +37,7 @@ Second, install required R packages:
 Finally, run following code in R console:
 
     library(shiny)
-    shiny::runGitHub("nla_kaart_timeline", "0zg", host ="0.0.0.0", port =1234, launch.browser = TRUE) 
+    runGitHub("nla_kaart_timeline", "0zg", host ="0.0.0.0", port =1234, launch.browser = TRUE) 
 
     
 
